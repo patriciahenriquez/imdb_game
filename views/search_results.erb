@@ -1,0 +1,12 @@
+<html>
+<body> 
+<h1> "Results" </h1><br /><br  />
+
+	Results 
+		<ul>
+		<% @nine_movies.each do |film| %>
+		<li><img src="<%= film.poster %>"></li>
+		<% end %>
+		<ul>
+</body>		
+</html>
