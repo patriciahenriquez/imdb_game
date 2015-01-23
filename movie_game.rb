@@ -18,12 +18,15 @@ end
 
 get '/search_results' do 
 	@search = Imdb::Search.new(session[:search_keywords])
-	#movie array
-	@movies = @search.movies 
-	@nine_movies = @movies[0..8]
+	@movies = @search.movies
+	@posters = []
+	@movies.each do |movie|
+		if @posters.length < 9 && movie.poster != nil
+			@posters << movie.poster
+		end
+	end
 	erb :search_results
 end 
-
 
 
 

@@ -1,11 +1,11 @@
 <html>
 <body> 
-<h1> "Results" </h1><br /><br  />
+<h1> Results </h1><br /><br  />
 
-	Results 
+ Which of these movies was in the year 1957?
 		<ul>
-		<% @nine_movies.each do |film| %>
-		<li><img src="<%= film.poster %>"></li>
+		<% 	@posters.each do |poster| %>
+			<li><img src="<%=poster%>"></li>
 		<% end %>
 		<ul>
 </body>		
